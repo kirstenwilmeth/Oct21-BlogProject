@@ -1,5 +1,6 @@
 package com.tts.techtalentblog.BlogPost;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,6 +15,8 @@ public class BlogPost {
 
     private String title;
     private String author;
+    
+    @Column(length=1000000)
     private String blogEntry;   
 
     public BlogPost(){
