@@ -1,11 +1,24 @@
 package com.tts.techtalentblog.BlogPost;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class BlogPost {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String title;
     private String author;
     private String blogEntry;   
+
+    public BlogPost(){
+        
+    }
     
     public BlogPost(String title, String author, String blogEntry) {
         this.title = title;
