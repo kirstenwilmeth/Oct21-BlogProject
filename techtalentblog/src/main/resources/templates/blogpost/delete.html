@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div th:replace="fragments/styling :: headStyles" ></div>
+    <title>Blog Post Deleted</title>
+</head>
+
+<body>
+  <div th:replace="fragments/navbar :: navbar"></div>
+    <div class="container">
+        <div style="margin: 50px;"class="text-center"></div>
+    
+           <h2> Your post was deleted.</h2>
+        
+        <div class="row">
+            <div class="col-md">
+          <a th:href="@{/}"><button class="btn btn-info">Return to Home</button></a>
+          <a th:href="@{/blogpost/new}"><button class= "btn btn-info">Submit a New Post</button></a>
+        </div>
+    </div>
+    </div>
+      
+    <div th:replace="fragments/styling :: bodyLinks"></div>
+
+</body>
+
+</html>
